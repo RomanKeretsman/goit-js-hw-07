@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 7 - DOM. События</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- =============================TASK-1================================== -->
+<div class="container">
+  <ul id="categories" class="list">
+    <li class="item">
+      <h2 class="tile">Животные</h2>
+
+      <ul>
+        <li class="list-item">Кот</li>
+        <li class="list-item">Хомяк</li>
+        <li class="list-item">Лошадь</li>
+        <li class="list-item">Попугай</li>
+      </ul>
+    </li>
+    <li class="item">
+      <h2 class="tile">Продукты</h2>
+
+      <ul>
+        <li class="list-item">Хлеб</li>
+        <li class="list-item">Петрушка</li>
+        <li class="list-item">Творог</li>
+      </ul>
+    </li>
+    <li class="item">
+      <h2 class="tile">Технологии</h2>
+
+      <ul>
+        <li class="list-item">HTML</li>
+        <li class="list-item">CSS</li>
+        <li class="list-item">JavaScript</li>
+        <li class="list-item">React</li>
+        <li class="list-item">Node</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- ================================TASK-2============================= -->
+
+  <ul id="ingredients" class="list"></ul>
+
+  <!-- ===============================TASK-3============================================ -->
+
+  <ul id="gallery"></ul>
+
+  <!-- ===============================TASK-4============================================ -->
+
+  <div id="counter">
+    <button class="btn"  type="button" data-action="decrement">-1</button>
+    <span class="counter-value" id="value">0</span>
+    <button class="btn" type="button" data-action="increment">+1</button>
+  </div>
+
+  <!-- ================================TASK-5========================================= -->
+
+  <input type="text" placeholder="Ваше имя?" id="name-input" />
+  <h1 class="input-text">Привет, <span id="name-output">незнакомец</span>!</h1>
+
+
+  <!-- ================================TASK-6========================================= -->
+
+  <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символов"/>
+
+  <!-- ================================TASK-7========================================= -->
+
+  <input id="font-size-control" type="range" />
+  <br />
+  <span id="text">Абракадабра!</span>
+
+  <!-- ================================TASK-8========================================= -->
+
+  <div id="controls">
+    <input type="number" min="0" max="100" step="1" />
+    <button class="btn" type="button" data-action="render">Создать</button>
+    <button class="btn" type="button" data-action="destroy">Очистить</button>
+  </div>
+
+  <div id="boxes"></div>
+</div>
+
+
+<!-- ================================SCRIPTS========================================= -->
+
+    <script src="./js/task-1.js" type="module"></script>
+    <script src="./js/task-2.js" type="module"></script>
+    <script src="./js/task-3.js" type="module"></script>
+    <script src="./js/task-4.js" type="module"></script>
+    <script src="./js/task-5.js" type="module"></script>
+    <script src="./js/task-6.js" type="module"></script>
+    <script src="./js/task-7.js" type="module"></script>
+    <script src="./js/task-8.js" type="module"></script>
+</body>
+</html>
