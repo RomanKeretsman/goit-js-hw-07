@@ -48,6 +48,8 @@ const galleryRef = document.querySelector('#gallery');
 
 const markup = images.reduce(
   (acc, picture) =>
-    acc + `<li class='gallery-item'><img class='image' src="${picture.url}" alt="${picture.alt}"></li>`, []
+    acc +
+    `<li class='gallery-item'><img class='image' src="${picture.url}" alt="${picture.alt}"></li>`,
+  '',
 );
 galleryRef.insertAdjacentHTML('afterbegin', markup);

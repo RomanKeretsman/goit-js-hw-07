@@ -24,12 +24,12 @@
 // }
 
 const inputRef = document.querySelector('#validation-input');
+const validateData = Number(inputRef.dataset.length);
 
 inputRef.addEventListener('blur', () => {
-  if (inputRef.value.length >= inputRef.dataset.length) {
+   inputRef.classList.add('invalid');
+  
+  if (inputRef.value.length === validateData) {
     inputRef.classList.replace('invalid', 'valid');
   }
-});
-inputRef.addEventListener('focus', () => {
-  inputRef.classList.add('invalid');
 });

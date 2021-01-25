@@ -22,37 +22,35 @@ const quantityRef = document.querySelector('[type="number"]');
 const btnCreateRef = document.querySelector('[data-action="render"]');
 const btnDeleteRef = document.querySelector('[data-action="destroy"]');
 const boxesRef = document.querySelector('#boxes');
+let px = 30;
 
+btnCreateRef.addEventListener('click', createBoxes);
+btnDeleteRef.addEventListener('click', destroyBoxes);
 
-btnCreateRef.addEventListener('click', render);
-btnDeleteRef.addEventListener('click', () => {
-  boxesRef.innerHTML = '';
-});
 
 function random_color() {
-    return `rgb( ${Math.random() * 256} ,  ${
-      Math.random() * 256
-    } ,  ${Math.random() * 256})`
+  return `rgb( ${Math.random() * 256} ,  ${Math.random() * 256} ,  ${
+    Math.random() * 256
+  })`;
 }
 
-function create(item) {
-    let num = 0;
-    let px = 10;
-    let boxArr = [];
-    for (let i = 1; i <= item; i += 1) {
-        num += 1;
-        px += 10;
-        let div = document.createElement('div');
-        div.textContent = num;
-        div.style.width = px + 'px';
-        div.style.height = px + 'px';
-        div.style.backgroundColor = random_color();
-        boxArr.push(div);
-    }
-    boxesRef.append(...boxArr);
+function createBoxes() {
+  const childrenCount = quantityRef.value;
+  let boxArr = [];
+  for (let i = 0; i < childrenCount; i += 1) {
+    const div = document.createElement('div');
+    div.style.width = px + 'px';
+    div.style.height = px + 'px';
+    px += 10;
+    div.style.backgroundColor = random_color();
+    boxArr.push(div);
+  }
+  boxesRef.append(...boxArr);
+  quantityRef.value = '';
 }
 
-function render() {
+function destroyBoxes() {
   boxesRef.innerHTML = '';
-  create(quantityRef.value);
+  quantityRef.value = '';
+  px = 30;
 }

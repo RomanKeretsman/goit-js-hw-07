@@ -130,6 +130,12 @@ width: 100px;
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+#boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 
 input[type=range] {
   width: 500px;
